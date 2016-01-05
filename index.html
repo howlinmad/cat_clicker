@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cat Clicker</title> 
+    <style>
+        img {
+            float: left;
+            padding: 1em;
+            padding-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cat Clicker</h1>
+        <h3>Click on a cat</h3>
+    </header>
+    <main>
+        <div>
+            <p id="cat1Name" style="margin-left:20%;font-size:1.5em;">name of the cat</p>
+            <img id="cat1" src="http://lorempixel.com/image_output/cats-q-c-640-480-1.jpg">
+            <p id="count1" style="margin-left:20%;font-size:2em;">0</p>
+        </div>
+        <div>
+            <p id="cat2Name" style="margin-left:55%;font-size:1.5em;">name of the cat</p>
+            <img id="cat2" src="http://lorempixel.com/image_output/cats-q-c-640-480-4.jpg">
+            <p id="count2" style="margin-left:20%;font-size:2em;">0</p>
+        </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        
+        var cats = {
+            names: ["fluffy", "gato macho"]
+        }
+        $('#cat1Name').text(cats.names[0]);
+        $('#cat2Name').text(cats.names[1]);
+        var counter1 = 0;
+        var counter2 = 0;
+        $('#cat1').click(function(){
+           counter1++;
+           $('#count1').text(counter1); 
+        });
+        $('#cat2').click(function(){
+           counter2++;
+           $('#count2').text(counter2); 
+        });
+    </script>
+</body>
+</html>
